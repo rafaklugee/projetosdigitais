@@ -78,13 +78,13 @@
     <comp lib="0" loc="(180,120)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
-      <a name="label" val="ENDERECO_W"/>
+      <a name="label" val="ENDERECO_RD"/>
       <a name="width" val="3"/>
     </comp>
     <comp lib="0" loc="(240,170)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
-      <a name="label" val="W"/>
+      <a name="label" val="RD"/>
     </comp>
     <comp lib="0" loc="(460,220)" name="Pin">
       <a name="appearance" val="NewPins"/>
