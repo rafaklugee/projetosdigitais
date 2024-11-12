@@ -1,4 +1,6 @@
-R: ADD, SUB, SLL, SLT (somador, subtrator, deslocador, deslocador)
+R: ADD, SUB, MUL, DIV, SLL, SLT (somador, subtrator, multiplicador, deslocador, deslocador)
+
+---------- CHECK ATÉ AQUI ----------
 
 I: ADDI, SLLI, SLTI, LW, JALR
 
@@ -7,4 +9,3 @@ S: SW
 B: BEQ, BNE, BLT, BGE
 
 J: JAL
-
