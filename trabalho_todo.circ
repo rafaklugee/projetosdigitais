@@ -5,6 +5,9 @@
   <lib desc="#Wiring" name="0">
     <tool name="Pin">
       <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="32"/>
     </tool>
   </lib>
   <lib desc="#Gates" name="1"/>
@@ -18,7 +21,7 @@
   <lib desc="#BFH-Praktika" name="9"/>
   <lib desc="#Input/Output-Extra" name="10"/>
   <lib desc="#Soc" name="11"/>
-  <main name="BD"/>
+  <main name="Banco_de_Registradores"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -51,9 +54,9 @@
     <tool lib="4" name="D Flip-Flop"/>
     <tool lib="4" name="Register"/>
   </toolbar>
-  <circuit name="BD">
+  <circuit name="Banco_de_Registradores">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="BD"/>
+    <a name="circuit" val="Banco_de_Registradores"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <comp lib="0" loc="(1210,250)" name="Pin">
@@ -260,7 +263,7 @@
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
     <comp loc="(1380,410)" name="ULA"/>
-    <comp loc="(980,410)" name="BD"/>
+    <comp loc="(980,410)" name="Banco_de_Registradores"/>
   </circuit>
   <circuit name="ULA">
     <a name="appearance" val="logisim_evolution"/>
@@ -349,6 +352,12 @@
       <a name="bit9" val="1"/>
       <a name="incoming" val="32"/>
     </comp>
+    <comp lib="0" loc="(650,160)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="south"/>
+      <a name="label" val="OP_ULA"/>
+      <a name="width" val="3"/>
+    </comp>
     <comp lib="0" loc="(720,170)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
@@ -413,6 +422,8 @@
     <wire from="(530,520)" to="(710,520)"/>
     <wire from="(530,590)" to="(720,590)"/>
     <wire from="(530,660)" to="(730,660)"/>
+    <wire from="(650,160)" to="(650,220)"/>
+    <wire from="(650,220)" to="(680,220)"/>
     <wire from="(680,240)" to="(680,310)"/>
     <wire from="(690,240)" to="(690,380)"/>
     <wire from="(700,240)" to="(700,450)"/>
@@ -420,5 +431,25 @@
     <wire from="(720,170)" to="(720,200)"/>
     <wire from="(720,240)" to="(720,590)"/>
     <wire from="(730,240)" to="(730,660)"/>
+  </circuit>
+  <circuit name="Unidade_de_Controle">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="Unidade_de_Controle"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(200,200)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="OPCODE"/>
+      <a name="width" val="6"/>
+    </comp>
+    <comp lib="4" loc="(300,190)" name="ROM">
+      <a name="addrWidth" val="6"/>
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="contents">addr/data: 6 24
+0
+</a>
+      <a name="dataWidth" val="24"/>
+    </comp>
+    <wire from="(200,200)" to="(300,200)"/>
   </circuit>
 </project>
