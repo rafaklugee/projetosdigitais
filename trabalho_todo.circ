@@ -267,6 +267,7 @@
     </comp>
     <comp loc="(1020,870)" name="Processador_de_IMM"/>
     <comp loc="(1470,390)" name="ULA"/>
+    <comp loc="(230,390)" name="MI"/>
     <comp loc="(670,950)" name="Unidade_de_Controle"/>
     <comp loc="(980,410)" name="Banco_de_Registradores"/>
     <wire from="(1020,870)" to="(1100,870)"/>
@@ -275,14 +276,18 @@
     <wire from="(1150,440)" to="(1240,440)"/>
     <wire from="(1240,430)" to="(1240,440)"/>
     <wire from="(1240,430)" to="(1250,430)"/>
-    <wire from="(440,430)" to="(440,470)"/>
-    <wire from="(440,430)" to="(760,430)"/>
-    <wire from="(440,470)" to="(440,490)"/>
-    <wire from="(440,470)" to="(760,470)"/>
-    <wire from="(440,490)" to="(440,870)"/>
-    <wire from="(440,490)" to="(760,490)"/>
-    <wire from="(440,870)" to="(440,950)"/>
-    <wire from="(440,870)" to="(800,870)"/>
+    <wire from="(230,390)" to="(440,390)"/>
+    <wire from="(230,410)" to="(430,410)"/>
+    <wire from="(230,430)" to="(760,430)"/>
+    <wire from="(230,450)" to="(250,450)"/>
+    <wire from="(230,470)" to="(240,470)"/>
+    <wire from="(240,470)" to="(240,490)"/>
+    <wire from="(240,490)" to="(760,490)"/>
+    <wire from="(250,450)" to="(250,470)"/>
+    <wire from="(250,470)" to="(760,470)"/>
+    <wire from="(430,410)" to="(430,970)"/>
+    <wire from="(430,970)" to="(450,970)"/>
+    <wire from="(440,390)" to="(440,950)"/>
     <wire from="(440,950)" to="(450,950)"/>
     <wire from="(980,410)" to="(1250,410)"/>
     <wire from="(980,430)" to="(1120,430)"/>
@@ -500,7 +505,7 @@
     <comp lib="0" loc="(1300,100)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
-      <a name="label" val="ALU_R_or_IMM"/>
+      <a name="label" val="ULA_R_or_IMM"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(1300,140)" name="Pin">
@@ -524,12 +529,26 @@
     <comp lib="0" loc="(730,400)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="label" val="OPCODE"/>
-      <a name="width" val="5"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(730,430)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="FUNC3"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(830,400)" name="Splitter">
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="1"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="1"/>
+      <a name="facing" val="west"/>
+      <a name="incoming" val="6"/>
     </comp>
     <comp lib="4" loc="(830,390)" name="ROM">
-      <a name="addrWidth" val="5"/>
+      <a name="addrWidth" val="6"/>
       <a name="appearance" val="logisim_evolution"/>
-      <a name="contents">addr/data: 5 12
+      <a name="contents">addr/data: 6 12
 0
 </a>
       <a name="dataWidth" val="12"/>
@@ -566,7 +585,10 @@
     <wire from="(1290,180)" to="(1300,180)"/>
     <wire from="(1290,230)" to="(1290,250)"/>
     <wire from="(1290,230)" to="(1300,230)"/>
-    <wire from="(730,400)" to="(830,400)"/>
+    <wire from="(730,400)" to="(810,400)"/>
+    <wire from="(730,430)" to="(810,430)"/>
+    <wire from="(810,400)" to="(810,410)"/>
+    <wire from="(810,420)" to="(810,430)"/>
   </circuit>
   <circuit name="Processador_de_IMM">
     <a name="appearance" val="logisim_evolution"/>
@@ -688,13 +710,13 @@
       <a name="select" val="2"/>
       <a name="width" val="24"/>
     </comp>
-    <comp lib="8" loc="(1067,592)" name="Text">
+    <comp lib="8" loc="(1065,590)" name="Text">
       <a name="text" val="Tipo R &amp; B"/>
     </comp>
-    <comp lib="8" loc="(1069,794)" name="Text">
+    <comp lib="8" loc="(1065,790)" name="Text">
       <a name="text" val="Tipo S"/>
     </comp>
-    <comp lib="8" loc="(1069,973)" name="Text">
+    <comp lib="8" loc="(1065,970)" name="Text">
       <a name="text" val="Tipo J"/>
     </comp>
     <wire from="(1090,1010)" to="(1300,1010)"/>
@@ -737,5 +759,92 @@
       <a name="dataWidth" val="24"/>
     </comp>
     <wire from="(420,450)" to="(470,450)"/>
+  </circuit>
+  <circuit name="MI">
+    <a name="appearance" val="logisim_evolution"/>
+    <a name="circuit" val="MI"/>
+    <a name="circuitnamedboxfixedsize" val="true"/>
+    <a name="simulationFrequency" val="1.0"/>
+    <comp lib="0" loc="(1090,730)" name="Splitter">
+      <a name="bit1" val="0"/>
+      <a name="bit10" val="2"/>
+      <a name="bit11" val="3"/>
+      <a name="bit12" val="3"/>
+      <a name="bit13" val="3"/>
+      <a name="bit14" val="3"/>
+      <a name="bit15" val="3"/>
+      <a name="bit16" val="4"/>
+      <a name="bit17" val="4"/>
+      <a name="bit18" val="4"/>
+      <a name="bit19" val="4"/>
+      <a name="bit2" val="0"/>
+      <a name="bit20" val="4"/>
+      <a name="bit21" val="5"/>
+      <a name="bit22" val="5"/>
+      <a name="bit23" val="5"/>
+      <a name="bit3" val="1"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="1"/>
+      <a name="bit6" val="2"/>
+      <a name="bit7" val="2"/>
+      <a name="bit8" val="2"/>
+      <a name="bit9" val="2"/>
+      <a name="fanout" val="6"/>
+      <a name="incoming" val="24"/>
+      <a name="spacing" val="2"/>
+    </comp>
+    <comp lib="0" loc="(1210,700)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="RS2"/>
+      <a name="output" val="true"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(1300,680)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="RS1"/>
+      <a name="output" val="true"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(1370,660)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="RD"/>
+      <a name="output" val="true"/>
+      <a name="width" val="5"/>
+    </comp>
+    <comp lib="0" loc="(1450,640)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="FUNC3"/>
+      <a name="output" val="true"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(1520,620)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="OPCODE"/>
+      <a name="output" val="true"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="0" loc="(850,680)" name="Pin">
+      <a name="appearance" val="NewPins"/>
+      <a name="label" val="PC"/>
+      <a name="width" val="3"/>
+    </comp>
+    <comp lib="4" loc="(850,670)" name="ROM">
+      <a name="addrWidth" val="3"/>
+      <a name="appearance" val="logisim_evolution"/>
+      <a name="contents">addr/data: 3 24
+0
+</a>
+      <a name="dataWidth" val="24"/>
+    </comp>
+    <wire from="(1110,620)" to="(1520,620)"/>
+    <wire from="(1110,640)" to="(1450,640)"/>
+    <wire from="(1110,660)" to="(1370,660)"/>
+    <wire from="(1110,680)" to="(1300,680)"/>
+    <wire from="(1110,700)" to="(1210,700)"/>
   </circuit>
 </project>
