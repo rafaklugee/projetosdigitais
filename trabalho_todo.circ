@@ -95,7 +95,7 @@
     <comp lib="0" loc="(400,150)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
-      <a name="label" val="R_ADR"/>
+      <a name="label" val="RD"/>
       <a name="width" val="3"/>
     </comp>
     <comp lib="0" loc="(460,240)" name="Pin">
@@ -106,7 +106,7 @@
     <comp lib="0" loc="(680,150)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="south"/>
-      <a name="label" val="RD"/>
+      <a name="label" val="R_ADRSS"/>
       <a name="radix" val="16"/>
       <a name="width" val="32"/>
     </comp>
@@ -278,7 +278,7 @@
     <wire from="(1240,430)" to="(1250,430)"/>
     <wire from="(230,390)" to="(440,390)"/>
     <wire from="(230,410)" to="(430,410)"/>
-    <wire from="(230,430)" to="(760,430)"/>
+    <wire from="(230,430)" to="(750,430)"/>
     <wire from="(230,450)" to="(250,450)"/>
     <wire from="(230,470)" to="(240,470)"/>
     <wire from="(240,470)" to="(240,490)"/>
@@ -289,6 +289,8 @@
     <wire from="(430,970)" to="(450,970)"/>
     <wire from="(440,390)" to="(440,950)"/>
     <wire from="(440,950)" to="(450,950)"/>
+    <wire from="(750,410)" to="(750,430)"/>
+    <wire from="(750,410)" to="(760,410)"/>
     <wire from="(980,410)" to="(1250,410)"/>
     <wire from="(980,430)" to="(1120,430)"/>
   </circuit>
