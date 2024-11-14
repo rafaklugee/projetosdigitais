@@ -383,7 +383,7 @@
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp lib="0" loc="(310,580)" name="Splitter">
+    <comp lib="0" loc="(760,690)" name="Splitter">
       <a name="bit1" val="0"/>
       <a name="bit10" val="3"/>
       <a name="bit11" val="3"/>
@@ -412,38 +412,55 @@
       <a name="incoming" val="24"/>
       <a name="spacing" val="2"/>
     </comp>
-    <comp lib="2" loc="(1330,460)" name="Multiplexer">
+    <comp lib="2" loc="(1780,570)" name="Multiplexer">
       <a name="width" val="32"/>
     </comp>
-    <comp loc="(1160,430)" name="Banco_de_Registradores"/>
-    <comp loc="(1200,890)" name="Processador_de_IMM"/>
-    <comp loc="(1650,410)" name="ULA"/>
-    <comp loc="(310,580)" name="MI"/>
-    <comp loc="(850,970)" name="Unidade_de_Controle"/>
-    <wire from="(1160,430)" to="(1430,430)"/>
-    <wire from="(1160,450)" to="(1300,450)"/>
-    <wire from="(1200,890)" to="(1280,890)"/>
-    <wire from="(1280,470)" to="(1280,890)"/>
-    <wire from="(1280,470)" to="(1300,470)"/>
-    <wire from="(1330,460)" to="(1420,460)"/>
-    <wire from="(1420,450)" to="(1420,460)"/>
-    <wire from="(1420,450)" to="(1430,450)"/>
-    <wire from="(340,600)" to="(340,630)"/>
-    <wire from="(340,630)" to="(460,630)"/>
-    <wire from="(360,600)" to="(360,620)"/>
-    <wire from="(360,620)" to="(450,620)"/>
-    <wire from="(380,600)" to="(380,610)"/>
-    <wire from="(380,610)" to="(440,610)"/>
-    <wire from="(400,410)" to="(1430,410)"/>
-    <wire from="(400,410)" to="(400,600)"/>
-    <wire from="(420,600)" to="(420,970)"/>
-    <wire from="(420,970)" to="(630,970)"/>
-    <wire from="(440,450)" to="(440,610)"/>
-    <wire from="(440,450)" to="(940,450)"/>
-    <wire from="(450,490)" to="(450,620)"/>
-    <wire from="(450,490)" to="(940,490)"/>
-    <wire from="(460,510)" to="(460,630)"/>
-    <wire from="(460,510)" to="(940,510)"/>
+    <comp lib="2" loc="(980,680)" name="Demultiplexer">
+      <a name="width" val="4"/>
+    </comp>
+    <comp loc="(1300,1080)" name="Unidade_de_Controle"/>
+    <comp loc="(1610,540)" name="Banco_de_Registradores"/>
+    <comp loc="(1650,1000)" name="Processador_de_IMM"/>
+    <comp loc="(2100,520)" name="ULA"/>
+    <comp loc="(670,690)" name="MI"/>
+    <wire from="(1000,700)" to="(1000,710)"/>
+    <wire from="(1000,710)" to="(1120,710)"/>
+    <wire from="(1010,670)" to="(1160,670)"/>
+    <wire from="(1010,690)" to="(1170,690)"/>
+    <wire from="(1120,1040)" to="(1320,1040)"/>
+    <wire from="(1120,710)" to="(1120,1040)"/>
+    <wire from="(1160,560)" to="(1160,670)"/>
+    <wire from="(1160,560)" to="(1390,560)"/>
+    <wire from="(1170,620)" to="(1170,690)"/>
+    <wire from="(1170,620)" to="(1390,620)"/>
+    <wire from="(1290,1120)" to="(1300,1120)"/>
+    <wire from="(1300,1120)" to="(1320,1120)"/>
+    <wire from="(1320,1040)" to="(1320,1120)"/>
+    <wire from="(1610,540)" to="(1880,540)"/>
+    <wire from="(1610,560)" to="(1750,560)"/>
+    <wire from="(1650,1000)" to="(1730,1000)"/>
+    <wire from="(1730,580)" to="(1730,1000)"/>
+    <wire from="(1730,580)" to="(1750,580)"/>
+    <wire from="(1780,570)" to="(1870,570)"/>
+    <wire from="(1870,560)" to="(1870,570)"/>
+    <wire from="(1870,560)" to="(1880,560)"/>
+    <wire from="(670,690)" to="(760,690)"/>
+    <wire from="(790,710)" to="(790,740)"/>
+    <wire from="(790,740)" to="(910,740)"/>
+    <wire from="(810,710)" to="(810,730)"/>
+    <wire from="(810,730)" to="(900,730)"/>
+    <wire from="(830,710)" to="(830,750)"/>
+    <wire from="(830,750)" to="(920,750)"/>
+    <wire from="(850,520)" to="(1880,520)"/>
+    <wire from="(850,520)" to="(850,710)"/>
+    <wire from="(870,1080)" to="(1080,1080)"/>
+    <wire from="(870,710)" to="(870,1080)"/>
+    <wire from="(900,600)" to="(1390,600)"/>
+    <wire from="(900,600)" to="(900,730)"/>
+    <wire from="(910,620)" to="(1170,620)"/>
+    <wire from="(910,620)" to="(910,740)"/>
+    <wire from="(920,680)" to="(920,750)"/>
+    <wire from="(920,680)" to="(980,680)"/>
   </circuit>
   <circuit name="ULA">
     <a name="appearance" val="logisim_evolution"/>
@@ -658,7 +675,7 @@
     <comp lib="0" loc="(1300,100)" name="Pin">
       <a name="appearance" val="NewPins"/>
       <a name="facing" val="west"/>
-      <a name="label" val="ULA_R_or_IMM"/>
+      <a name="label" val="OP_RS2_or_RD"/>
       <a name="output" val="true"/>
     </comp>
     <comp lib="0" loc="(1300,140)" name="Pin">
