@@ -109,12 +109,12 @@
       <a name="label" val="Op"/>
       <a name="width" val="4"/>
     </comp>
+    <comp lib="0" loc="(1190,500)" name="Tunnel">
+      <a name="facing" val="east"/>
+    </comp>
     <comp lib="0" loc="(1230,450)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="WE_REG"/>
-    </comp>
-    <comp lib="0" loc="(1230,470)" name="Tunnel">
-      <a name="facing" val="east"/>
     </comp>
     <comp lib="0" loc="(130,90)" name="Clock"/>
     <comp lib="0" loc="(140,90)" name="Tunnel">
@@ -256,8 +256,10 @@ c3000000 d0000003 b202000c c2000000 e120000c f0000000
     <wire from="(1130,450)" to="(1130,530)"/>
     <wire from="(1130,530)" to="(1280,530)"/>
     <wire from="(1180,590)" to="(1220,590)"/>
+    <wire from="(1190,500)" to="(1200,500)"/>
+    <wire from="(1200,470)" to="(1200,500)"/>
+    <wire from="(1200,470)" to="(1240,470)"/>
     <wire from="(1230,450)" to="(1240,450)"/>
-    <wire from="(1230,470)" to="(1240,470)"/>
     <wire from="(1240,350)" to="(1240,370)"/>
     <wire from="(1240,350)" to="(1850,350)"/>
     <wire from="(130,90)" to="(140,90)"/>
