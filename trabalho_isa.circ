@@ -587,7 +587,7 @@
       <a name="addrWidth" val="24"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 24 24
-0 8081 8101 18181 28201 321a2 10a80 1081
+0 8081 8101 18181 28201 321b2 10a80 1081
 2901 ffa201 fff835 1201
 </a>
       <a name="dataWidth" val="24"/>
@@ -609,7 +609,7 @@
     <comp lib="8" loc="(2585,575)" name="Text">
       <a name="text" val="PC + IMM"/>
     </comp>
-    <comp lib="8" loc="(2934,531)" name="Text">
+    <comp lib="8" loc="(2930,530)" name="Text">
       <a name="text" val="RS1 + IMM"/>
     </comp>
     <comp lib="8" loc="(3195,840)" name="Text">
